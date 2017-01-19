@@ -4,11 +4,9 @@
 
 This repo contains the resources of the [software.wikimedia.de website](https://software.wikimedia.de).
 
-The website uses the [Silex](silex.sensiolabs.org/) PHP micro-framework.
+The website uses the [Silex](silex.sensiolabs.org/) PHP micro-framework. It requires PHP 7.0 or later.
 
 ## Development
-
-Requires PHP 7.0+
 
 For running the application, run `php -S 0:8000` in `web`. No need to have a real server set up.
 
