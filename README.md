@@ -6,4 +6,10 @@ This repo contains the resources of the [software.wikimedia.de website](https://
 
 The website uses the [Silex](silex.sensiolabs.org/) PHP micro-framework.
 
-For developing, you can simply run `php -S 0:8000` in `web`. No need to have a real server set up.
+## Development
+
+Requires PHP 7.0+
+
+For running the application, run `php -S 0:8000` in `web`. No need to have a real server set up.
+
+There are a few smoke tests that can be run with `vendor/bin/phpunit`
