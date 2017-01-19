@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Software Development at Wikimedia Deutschland {% block title '' %}</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="{{ app.request.basepath }}/components/bootstrap/bootstrap-built.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="{{ app.request.basepath }}/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ app.request.basepath }}/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
