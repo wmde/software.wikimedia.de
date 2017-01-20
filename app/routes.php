@@ -2,18 +2,36 @@
 
 declare( strict_types = 1 );
 
-/**
- * These variables need to be in scope when this file is included:
- *
- * @var \Silex\Application $app
- */
+use Silex\Application;
 
-$app->get(
-	'/',
-	function() use ( $app ) {
-		return $app['twig']->render(
-			'pages/home.html',
-			array()
+class Routes {
+
+	private $app;
+
+	public function __construct( Application $app ) {
+		$this->app = $app;
+	}
+
+	public function register() {
+		$this->app->get(
+			'/',
+			function() {
+				return $this->renderTwigTemplate( 'home.html' );
+			}
 		);
 	}
-);
+
+	private function renderTwigTemplate( $templateName ): string {
+		return $this->getTwig()->render(
+			'pages/' . $templateName,
+			[
+				'basepath' => ''
+			]
+		);
+	}
+
+	private function getTwig(): \Twig_Environment {
+		return $this->app['twig'];
+	}
+
+}

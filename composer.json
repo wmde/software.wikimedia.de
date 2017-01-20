@@ -15,10 +15,12 @@
 		"whatthejeff/nyancat-phpunit-resultprinter": "~1.2",
 		"symfony/browser-kit": "~2.7"
 	},
+	"autoload": {
+		"classmap": [
+			"app/"
+		]
+	},
 	"config": {
 		"component-dir": "web/components"
-	},
-	"autoload": {
-		"psr-0": { "": "src/" }
 	}
 }

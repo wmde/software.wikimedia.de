@@ -13,7 +13,7 @@ $app->register(new ValidatorServiceProvider());
 $app->register(new ServiceControllerServiceProvider());
 $app->register(new TwigServiceProvider());
 
-$app['twig.path'] = array(__DIR__.'/templates');
+$app['twig.path'] = [ __DIR__.'/templates' ];
 
 $app->error(function ( \Exception $e, $request, $code ) use ($app) {
     if ($app['debug']) {
@@ -33,6 +33,6 @@ $app->error(function ( \Exception $e, $request, $code ) use ($app) {
     return new Response($app['twig']->resolveTemplate($templates)->render(['code' => $code]), $code);
 });
 
-require __DIR__ . '/routes.php';
+( new Routes( $app ) )->register();
 
 return $app;
