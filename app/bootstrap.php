@@ -6,6 +6,7 @@ use Silex\Application;
 use Silex\Provider\ServiceControllerServiceProvider;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\ValidatorServiceProvider;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 $app = new Application();
@@ -15,7 +16,7 @@ $app->register(new TwigServiceProvider());
 
 $app['twig.path'] = [ __DIR__.'/templates' ];
 
-$app->error(function ( \Exception $e, $request, $code ) use ($app) {
+$app->error(function ( \Exception $e, Request $request, $code ) use ($app) {
     if ($app['debug']) {
         return;
     }
@@ -30,7 +31,10 @@ $app->error(function ( \Exception $e, $request, $code ) use ($app) {
         'errors/default.html',
     ];
 
-    return new Response($app['twig']->resolveTemplate($templates)->render(['code' => $code]), $code);
+    return new Response($app['twig']->resolveTemplate($templates)->render(
+    	[ 'code' => $code, 'basepath' => $request->getBasePath()] ),
+		$code
+	);
 });
 
 ( new Routes( $app ) )->register();

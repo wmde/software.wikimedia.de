@@ -23,8 +23,15 @@ class Routes {
 
 		$this->app->get(
 			'/{page}',
-			function( string $page, Request $request ) {
+			function( Request $request, string $page ) {
 				return $this->renderPage( $request->getBasePath(), $page );
+			}
+		);
+
+		$this->app->get(
+			'/{page}/{sub}',
+			function( Request $request, string $page, string $sub ) {
+				return $this->renderPage( $request->getBasePath(), $page . '/' . $sub );
 			}
 		);
 	}
