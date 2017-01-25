@@ -3,6 +3,7 @@
 declare( strict_types = 1 );
 
 use Silex\Application;
+use Symfony\Component\HttpFoundation\Request;
 
 class Routes {
 
@@ -15,33 +16,33 @@ class Routes {
 	public function register() {
 		$this->app->get(
 			'/',
-			function() {
-				return $this->renderPage( 'home' );
+			function( Request $request ) {
+				return $this->renderPage( $request->getBasePath(), 'home' );
 			}
 		);
 
 		$this->app->get(
 			'/{page}',
-			function( $page ) {
-				return $this->renderPage( $page );
+			function( string $page, Request $request ) {
+				return $this->renderPage( $request->getBasePath(), $page );
 			}
 		);
 	}
 
-	private function renderPage( string $pageName ): string {
+	private function renderPage( string $basePath, string $pageName ): string {
 		try {
-			return $this->renderTwigTemplate( "pages/$pageName.html", $pageName );
+			return $this->renderTwigTemplate( $basePath, "pages/$pageName.html", $pageName );
 		}
 		catch ( Twig_Error_Loader $ex ) {
-			return $this->renderTwigTemplate( 'errors/404.html', '' );
+			return $this->renderTwigTemplate( $basePath, 'errors/404.html', '' );
 		}
 	}
 
-	private function renderTwigTemplate( string $templateName, string $pageName ): string {
+	private function renderTwigTemplate( string $basePath, string $templateName, string $pageName ): string {
 		return $this->getTwig()->render(
 			$templateName,
 			[
-				'basepath' => '',
+				'basepath' => $basePath,
 				'page' => $pageName
 			]
 		);
