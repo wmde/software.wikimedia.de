@@ -26,7 +26,7 @@ class SmokeTest extends WebTestCase {
 
 		$client->request( 'GET', '/' );
 
-		$this->assertContains( 'Hello!', $client->getResponse()->getContent() );
+		$this->assertContains( 'software development', $client->getResponse()->getContent() );
 	}
 
 	public function testPageNotFound() {
