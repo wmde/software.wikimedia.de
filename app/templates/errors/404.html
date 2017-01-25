@@ -1,5 +1,14 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <img src="{{ app.request.basepath }}/images/errors/404.jpg" alt="404, page not found" />
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header"></h1>
+        </div>
+        <div class="col-md-12">
+            <img src="{{ basepath }}/images/errors/404.jpg" alt="404, page not found" class="img-responsive center-block" />
+        </div>
+    </div>
+
 {% endblock %}

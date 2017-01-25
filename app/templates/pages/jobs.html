@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Career Opportunities
+                    <small>Very amawzing, apply naow!</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="{{ basepath }}/home">Home</a>
+                    </li>
+                    <li class="active">Career Opportunities</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Blah blah awesome jobs blah.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            {% include 'sections/job-list.html' %}
+        </div>
+
+    </div>
+
+{% endblock %}

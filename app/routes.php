@@ -16,16 +16,33 @@ class Routes {
 		$this->app->get(
 			'/',
 			function() {
-				return $this->renderTwigTemplate( 'home.html' );
+				return $this->renderPage( 'home' );
+			}
+		);
+
+		$this->app->get(
+			'/{page}',
+			function( $page ) {
+				return $this->renderPage( $page );
 			}
 		);
 	}
 
-	private function renderTwigTemplate( $templateName ): string {
+	private function renderPage( string $pageName ): string {
+		try {
+			return $this->renderTwigTemplate( "pages/$pageName.html", $pageName );
+		}
+		catch ( Twig_Error_Loader $ex ) {
+			return $this->renderTwigTemplate( 'errors/404.html', '' );
+		}
+	}
+
+	private function renderTwigTemplate( string $templateName, string $pageName ): string {
 		return $this->getTwig()->render(
-			'pages/' . $templateName,
+			$templateName,
 			[
-				'basepath' => ''
+				'basepath' => '',
+				'page' => $pageName
 			]
 		);
 	}

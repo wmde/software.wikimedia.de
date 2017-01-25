@@ -1,5 +1,14 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <img src="{{ app.request.basepath }}/images/errors/500.jpg" alt="500, internal server error" />
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header"></h1>
+        </div>
+        <div class="col-md-12">
+            <img src="{{ basepath }}/images/errors/500.jpg" alt="500, internal server error" class="img-responsive center-block" />
+        </div>
+    </div>
+
 {% endblock %}
