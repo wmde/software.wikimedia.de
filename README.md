@@ -21,3 +21,6 @@ The HTML can be found in `app/templates`. The [Twig](http://twig.sensiolabs.org/
 * `sections/` contains HTML that is reused on multiple pages via the Twig `include` thing
 
 Resources such as JS, CSS and images can be found in `web/`
+
+The stuff is based on Twitter Bootstrap and uses structure borrowed from the
+[Modern Business bootstrap template](https://startbootstrap.com/template-overviews/modern-business/).
