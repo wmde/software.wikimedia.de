@@ -11,3 +11,13 @@ The website uses the [Silex](silex.sensiolabs.org/) PHP micro-framework. It requ
 For running the application, run `php -S 0:8000` in `web`. No need to have a real server set up.
 
 There are a few smoke tests that can be run with `vendor/bin/phpunit`
+
+### I'm a UX and allergic to PHP
+
+The HTML can be found in `app/templates`. The [Twig](http://twig.sensiolabs.org/) template engine is used.
+
+* `layout.html` contains the non-page-specific stuff such as menu, footer and JS/CSS loading
+* `pages/` contains one file per page, matching URL structure (plus `.html`)
+* `sections/` contains HTML that is reused on multiple pages via the Twig `include` thing
+
+Resources such as JS, CSS and images can be found in `web/`
