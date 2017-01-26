@@ -44,13 +44,13 @@
                     <li class="{% if page == 'jobs' %}active{% endif %}">
                         <a href="{{ basepath }}/jobs">Career Opportunities</a>
                     </li>
-                    <li class="disabled {% if page == 'department' %}active{% endif %}">
+                    <li class="{% if page == 'department' %}active{% endif %}">
                         <a href="{{ basepath }}/department">Our Department</a>
                     </li>
                     <li class="{% if page == 'projects' %}active{% endif %}">
                         <a href="{{ basepath }}/projects">Our Projects</a>
                     </li>
-                    <li class="disabled {% if page == 'contributing' %}active{% endif %}">
+                    <li class="{% if page == 'contributing' %}active{% endif %}">
                         <a href="{{ basepath }}/contributing">Contributing</a>
                     </li>
                 </ul>
