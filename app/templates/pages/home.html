@@ -25,17 +25,70 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">
-                Career Opportunities
-            </h2>
+            <br />
+            <br />
         </div>
-
-        {% include 'sections/job-intro.html' %}
+        <div class="col-md-3 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <span class="fa-stack fa-5x">
+                          <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                          <i class="fa fa-sign-in fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <h4>Career Opportunities</h4>
+                    <p>We are looking for passionate and skilled people.</p>
+                    <a href="{{ basepath }}/jobs" class="btn btn-primary">View Opportunities</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <span class="fa-stack fa-5x">
+                          <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                          <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <h4>Our department</h4>
+                    <p>We develop Free Software to support various Wikimedia projects.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <span class="fa-stack fa-5x">
+                          <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                          <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <h4>Our projects</h4>
+                    <p>We develop Free Software to support various Wikimedia projects.</p>
+                    <a href="#" class="btn btn-primary">View Projects</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <span class="fa-stack fa-5x">
+                          <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                          <i class="fa fa-comments fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <h4>Contributing</h4>
+                    <p>You can contribute as a developer, editor, or data donor.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="row">
-        <br />
-        {% include 'sections/job-list.html' %}
-    </div>
 
 {% endblock %}
