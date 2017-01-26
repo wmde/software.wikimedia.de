@@ -24,14 +24,14 @@ class Routes {
 		$this->app->get(
 			'/{page}',
 			function( Request $request, string $page ) {
-				return $this->renderPage( $request->getBasePath(), $page );
+				return $this->renderPage( $request->getBasePath(), basename( $page ) );
 			}
 		);
 
 		$this->app->get(
 			'/{page}/{sub}',
 			function( Request $request, string $page, string $sub ) {
-				return $this->renderPage( $request->getBasePath(), $page . '/' . $sub );
+				return $this->renderPage( $request->getBasePath(), basename( $page ) . '/' . basename( $sub ) );
 			}
 		);
 	}
