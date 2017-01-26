@@ -8,6 +8,8 @@ The website uses the [Silex](silex.sensiolabs.org/) PHP micro-framework. It requ
 
 ## Development
 
+After cloning the repo, run `composer install` in the root directory.
+
 For running the application, run `php -S 0:8000` in `web`. No need to have a real server set up.
 
 There are a few smoke tests that can be run with `vendor/bin/phpunit`
