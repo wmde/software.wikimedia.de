@@ -1,23 +1,12 @@
 {% extends "layout.html" %}
 
 {% block header %}
-    <style type="text/css">
-        .image-bg-fixed-height {
-            text-align: center;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            background-size: cover;
-            -o-background-size: cover;
-            height: 400px;
-            background: url('{{ basepath }}/images/postcard.jpg') no-repeat center top scroll;
-            background-size: 100%;
-            padding: 80px 0;
-        }
-    </style>
+  
 
     <header class="image-bg-fixed-height" style="">
-        <img width="300px" src="{{ basepath }}/images/wmde-logo.png">
-        <h1 style="color: white">Wikidata Deutschland e.V.  Software Development Department</h1>
+        <img width="500px" src="{{ basepath }}/images/WMDE_Logo_horizontal_white Software.svg" alt="Wikidata Deutschland e.V.  Software Development Department" style="background:rgba(0,0,0,0.5); padding:1.5em;"></img>
+        <h1 style="color: white; text-indent:-999em">Wikidata Deutschland e.V.  Software Development Department</h1>
+        
     </header>
 {% endblock %}
 
