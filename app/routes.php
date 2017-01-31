@@ -4,6 +4,7 @@ declare( strict_types = 1 );
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class Routes {
 
@@ -36,12 +37,17 @@ class Routes {
 		);
 	}
 
-	private function renderPage( string $basePath, string $pageName ): string {
+	private function renderPage( string $basePath, string $pageName ): Response {
 		try {
-			return $this->renderTwigTemplate( $basePath, "pages/$pageName.html", $pageName );
+			return new Response(
+				$this->renderTwigTemplate( $basePath, "pages/$pageName.html", $pageName )
+			);
 		}
 		catch ( Twig_Error_Loader $ex ) {
-			return $this->renderTwigTemplate( $basePath, 'errors/404.html', '' );
+			return new Response(
+				$this->renderTwigTemplate( $basePath, 'errors/404.html', '' ),
+				404
+			);
 		}
 	}
 
