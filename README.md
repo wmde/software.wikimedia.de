@@ -20,7 +20,7 @@ The HTML can be found in `app/templates`. The [Twig](http://twig.sensiolabs.org/
 
 * `layout.html` contains the non-page-specific stuff such as menu, footer and JS/CSS loading
 * `pages/` contains one file per page, matching URL structure (plus `.html`)
-* `sections/` contains HTML that is reused on multiple pages via the Twig `include` thing
+* `sections/` contains page sections used on multiple pages via the Twig `include` thing
 
 Resources such as JS, CSS and images can be found in `web/`
 
