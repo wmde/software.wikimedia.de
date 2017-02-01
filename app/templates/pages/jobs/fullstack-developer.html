@@ -1,101 +1,77 @@
-{% extends "layout.html" %}
+{% extends "job-layout.html" %}
+{% set job_title = 'Fullstack Developer' %}
 
-{% block title %}Fullstack Developer | Career Opportunities at Wikimedia Deutschland{% endblock %}
+{% block job_content %}
 
-{% block content %}
-
-<div class="container">
-
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Fullstack Developer</h1>
-
-            <ol class="breadcrumb">
-                <li><a href="{{ basepath }}/">Home</a></li>
-                <li><a href="{{ basepath }}/jobs">Career Opportunities</a></li>
-                <li class="active">Fullstack Developer</li>
-            </ol>
-        </div>
+<div class="row">
+    <div class="col-lg-12">
+        <p>
+            We are looking for a Software Developer to join one of our agile development teams in our
+            office at the heart of Berlin. You will either be working on the software behind the Wikidata project
+            or on the software that powers our fundraising application and possible cross-department projects.
+        </p>
     </div>
-
-    <div class="row">
-        <div class="col-lg-12">
-            {% include 'sections/job/position-intro.html' %}
-
-            <p>
-                Wikimedia Deutschland furthers these ideals even beyond the free encyclopedia: It is our aim to establish and promote the
-                creation, collection, and distribution of free knowledge in all parts of society. Our objective is to create a world in which
-                the sum of all human knowledge is freely accessible for everyone. The main focus of our activities is the support of volunteers,
-                the development of technology and software, public education, and cooperation with cultural and scientific institutions. We
-                grant scholarships to volunteers working for Wikimedia projects and we provide technical support. On both the national and
-                EU-level, we are advocating a legal framework which allows for free knowledge to become part of our everyday life.
-            </p>
-
-            <p>
-                We are looking for a Software Developer to join one of our agile development teams in our
-                office at the heart of Berlin. You will either be working on the software behind the Wikidata project
-                or on the software that powers our fundraising application and possible cross-department projects.
-            </p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-12">
-            <h2>About you</h2>
-
-            <ul>
-                <li>You care about software; you have a passion which you can clearly convey by your actions rather than personal statements on your CV alone</li>
-                <li>You have an eye for software design and quality</li>
-                <li>You can recognize legacy code and know how to effectively deal with it</li>
-                <li>You are able to communicate fluently in English in a multidisciplinary team</li>
-                <li>For you it’s more than a job</li>
-            </ul>
-
-            <p>
-                We’re interested in candidates from any background, as long as you have a solid understanding of Object Oriented
-                languages and basic experience with web development.
-            </p>
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="col-lg-12">
-            {% include 'sections/job/what-we-offer.html' %}
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-12">
-            <h2>Technologies we use</h2>
-
-            <p>
-                Most of our server side code is written in PHP. A lot of our projects have a HTML 5 & JavaScript frontend,
-                which interact with server side backends via web APIs. We test our code with PHPUnit and QUnit, and with
-                browser tests written in Ruby. Some of our code is written on top of the MediaWiki framework, some of it is
-                entirely in-house and for newer projects we use libraries such as Symfony components and Doctrine.
-            </p>
-
-            <p>An (incomplete) list of technologies we're currently using:</p>
-
-            <ul>
-                <li>JavaScript, PHP, Ruby</li>
-                <li>MediaWiki, several MediaWiki extensions</li>
-                <li>PHPUnit, QUnit, Selenium, Cucumber, PHPCS, PHPMD, JSLint, Rubocop</li>
-                <li>Git</li>
-                <li>MySQL, SQLite</li>
-                <li>Composer</li>
-                <li>TravisCI, ScrutinizerCI, Jenkins</li>
-                <li>Wikimedia Labs infrastructure</li>
-                <li>Phabricator</li>
-                <li>Linux server, nginx</li>
-                <li>Puppet, Vagrant</li>
-            </ul>
-        </div>
-    </div>
-
-    {{ include('sections/job/apply-now.html', {link: 'http://hr.gs/amawzing-fullstack'}) }}
-
 </div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h2>About you</h2>
+
+        <ul>
+            <li>You care about software; you have a passion which you can clearly convey by your actions rather than personal statements on your CV alone</li>
+            <li>You have an eye for software design and quality</li>
+            <li>You can recognize legacy code and know how to effectively deal with it</li>
+            <li>You are able to communicate fluently in English in a multidisciplinary team</li>
+            <li>For you it’s more than a job</li>
+        </ul>
+
+        <p>
+            We’re interested in candidates from any background, as long as you have a solid understanding of Object Oriented
+            languages and basic experience with web development.
+        </p>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        {% include 'sections/job/what-we-offer.html' %}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h2>Technologies we use</h2>
+
+        <p>
+            Most of our server side code is written in PHP. A lot of our projects have a HTML 5 & JavaScript frontend,
+            which interact with server side backends via web APIs. We test our code with PHPUnit and QUnit, and with
+            browser tests written in Ruby. Some of our code is written on top of the MediaWiki framework, some of it is
+            entirely in-house and for newer projects we use libraries such as Symfony components and Doctrine.
+        </p>
+
+        <p>An (incomplete) list of technologies we're currently using:</p>
+
+        <ul>
+            <li>JavaScript, PHP, Ruby</li>
+            <li>MediaWiki, several MediaWiki extensions</li>
+            <li>PHPUnit, QUnit, Selenium, Cucumber, PHPCS, PHPMD, JSLint, Rubocop</li>
+            <li>Git</li>
+            <li>MySQL, SQLite</li>
+            <li>Composer</li>
+            <li>TravisCI, ScrutinizerCI, Jenkins</li>
+            <li>Wikimedia Labs infrastructure</li>
+            <li>Phabricator</li>
+            <li>Linux server, nginx</li>
+            <li>Puppet, Vagrant</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block job_apply_now %}
+
+{{ include('sections/job/apply-hackerrank.html', {link: 'http://hr.gs/amawzing-fullstack'}) }}
 
 {% endblock %}

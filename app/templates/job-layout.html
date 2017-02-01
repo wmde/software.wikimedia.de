@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}{{job_title}} | Career Opportunities at Wikimedia Deutschland{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">{{job_title}}</h1>
+
+            <ol class="breadcrumb">
+                <li><a href="{{ basepath }}/">Home</a></li>
+                <li><a href="{{ basepath }}/jobs">Career Opportunities</a></li>
+                <li class="active">{{job_title}}</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <p>
+                <strong>Wikimedia Deutschland – Gesellschaft zur Förderung Freien Wissens e. V.</strong> is a non-profit organisation based in Berlin, Germany.
+                With more than 80 employees and about 35.000 members, it is the oldest and largest of more than 40 independent chapters of
+                the international Wikimedia movement. The most well-known Wikimedia project, the free online encyclopedia Wikipedia, is used
+                by millions of people across the world every day and is continuously updated and improved by millions of users.
+            </p>
+
+            <p>
+                Wikimedia Deutschland furthers these ideals even beyond the free encyclopedia: It is our aim to establish and promote the
+                creation, collection, and distribution of free knowledge in all parts of society. Our objective is to create a world in which
+                the sum of all human knowledge is freely accessible for everyone. The main focus of our activities is the support of volunteers,
+                the development of technology and software, public education, and cooperation with cultural and scientific institutions. We
+                grant scholarships to volunteers working for Wikimedia projects and we provide technical support. On both the national and
+                EU-level, we are advocating a legal framework which allows for free knowledge to become part of our everyday life.
+            </p>
+        </div>
+    </div>
+
+    {% block job_content %}{% endblock %}
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Apply now</h2>
+
+            {% block job_apply_now %}{% endblock %}
+
+            <p>
+                Wikimedia Deutschland commits itself to the principles of equal opportunity and does not discriminate on the basis of
+                ethnic origin, nationality, religion, political or other opinion, sex, age, disability or sexual identity or orientation.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
