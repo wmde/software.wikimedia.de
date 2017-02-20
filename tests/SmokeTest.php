@@ -21,7 +21,7 @@ class SmokeTest extends WebTestCase {
 		$this->assertSame( 200, $client->getResponse()->getStatusCode() );
 	}
 
-	public function testRootPageContainsHello() {
+	public function testRootPageContainsWikimedia() {
 		$client = $this->createClient();
 
 		$client->request( 'GET', '/' );
