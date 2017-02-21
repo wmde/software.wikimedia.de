@@ -26,3 +26,4 @@ Resources such as JS, CSS and images can be found in `web/`
 
 The stuff is based on Twitter Bootstrap and uses structure borrowed from the
 [Modern Business bootstrap template](https://startbootstrap.com/template-overviews/modern-business/).
+
