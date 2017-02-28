@@ -22,5 +22,10 @@
 	},
 	"config": {
 		"component-dir": "web/components"
+	},
+	"scripts": {
+		"ci": [
+			"vendor/bin/phpunit"
+		]
 	}
 }
