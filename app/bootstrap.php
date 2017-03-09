@@ -10,14 +10,15 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 $app = new Application();
-$app->register(new ValidatorServiceProvider());
-$app->register(new ServiceControllerServiceProvider());
-$app->register(new TwigServiceProvider());
+$app->register( new ValidatorServiceProvider() );
+$app->register( new ServiceControllerServiceProvider() );
+$app->register( new TwigServiceProvider() );
 
 $app['twig.path'] = [ __DIR__.'/templates' ];
+$app['twig']->addExtension( new BlogTwigExtension( $app ) );
 
-$app->error(function ( \Exception $e, Request $request, $code ) use ($app) {
-    if ($app['debug']) {
+$app->error(function ( \Exception $e, Request $request, $code ) use ( $app ) {
+    if ( $app['debug'] ) {
         return;
     }
 
@@ -31,7 +32,7 @@ $app->error(function ( \Exception $e, Request $request, $code ) use ($app) {
         'errors/default.html',
     ];
 
-    return new Response($app['twig']->resolveTemplate($templates)->render(
+    return new Response($app['twig']->resolveTemplate( $templates )->render(
     	[ 'code' => $code, 'basepath' => $request->getBasePath()] ),
 		$code
 	);
