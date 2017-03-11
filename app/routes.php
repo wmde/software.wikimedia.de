@@ -39,9 +39,13 @@ class Routes {
 
 	private function renderPage( string $basePath, string $pageName ): Response {
 		try {
-			return new Response(
+			$response = new Response(
 				$this->renderTwigTemplate( $basePath, "pages/$pageName.html", $pageName )
 			);
+
+			$response->setTtl( 1800 );
+
+			return $response;
 		}
 		catch ( Twig_Error_Loader $ex ) {
 			return new Response(

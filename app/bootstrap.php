@@ -14,6 +14,11 @@ $app->register( new ValidatorServiceProvider() );
 $app->register( new ServiceControllerServiceProvider() );
 $app->register( new TwigServiceProvider() );
 
+$app->register(
+	new Silex\Provider\HttpCacheServiceProvider(),
+	[ 'http_cache.cache_dir' => __DIR__ . '/../var/cache/' ]
+);
+
 $app['twig.path'] = [ __DIR__.'/templates' ];
 $app['twig']->addExtension( new BlogTwigExtension( $app ) );
 
@@ -39,5 +44,7 @@ $app->error(function ( \Exception $e, Request $request, $code ) use ( $app ) {
 });
 
 ( new Routes( $app ) )->register();
+
+$app['http_cache']->run();
 
 return $app;
