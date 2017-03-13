@@ -1,138 +1,116 @@
-{% extends "layout.html" %}
-
-{% block title %}Contributing at Wikimedia Deutschland{% endblock %}
-
-{% block content %}
+{% extends "layout.html" %} {% block title %}Contributing at Wikimedia Deutschland{% endblock %} {% block content %}
 
 <div class="container">
 
     <div class="row">
         <div class="col-lg-12">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h1 class="page-header">
+            <h1 class="page-header">
                         Contributing
+                        <a href="#" class="editlink">Edit Page</a>
                     </h1>
-                </div>
-                <div class="col-lg-4">
-                    [edit]
-                </div>
-            </div>
-
-            <ol class="breadcrumb">
-                <li><a href="{{ basepath }}/">Home</a></li>
-                <li class="active">Contributing</li>
-            </ol>
         </div>
+
+
+
+        <ol class="breadcrumb col-lg-12">
+            <li><a href="{{ basepath }}/">Home</a></li>
+            <li class="active">Contributing</li>
+        </ol>
     </div>
+</div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Volunteering</h2>
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Volunteering</h2>
 
-                    <p>
-                        You can volunteer as a developer, editor, data donor, partner or community
-                        supporter. Everyone has special skills and the Wikimedia movement is good
-                        place to be given complete expression. The biggest question is: What do
-                        you want to do?
-                    </p>
+                <p>
+                    You can volunteer as a developer, editor, data donor, partner or community supporter. Everyone has special skills and the Wikimedia movement is good place to be given complete expression. The biggest question is: What do you want to do?
+                </p>
 
-                    <p>
-                        Our <a href="{{ basepath }}/projects">list of projects</a> links to detailed
-                        resources on how to contribute to them. If you have any questions, feel free
-                        to contact <a href="{{ basepath }}/department">our department</a>.
-                    </p>
-                </div>
+                <p>
+                    Our <a href="{{ basepath }}/projects">list of projects</a> links to detailed resources on how to contribute to them. If you have any questions, feel free to contact <a href="{{ basepath }}/department">our department</a>.
+                </p>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Internships</h2>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Internships</h2>
 
-                    <p>
-                        We have a special mentoring program for students and junior volunteer
-                        developers. We will support your in your personal & professional development.
-                    </p>
+                <p>
+                    We have a special mentoring program for students and junior volunteer developers. We will support your in your personal & professional development.
+                </p>
 
-                    <p>
-                        For us your personal development is paramount. We are helping you to identify
-                        your strengths and find your own project at Wikimedia.
-                        We offer internships, working student contracts, dissertations for pupils
-                        and students. Each pupil and student gets a mentor who supports them with
-                        their personal development.
-                    </p>
+                <p>
+                    For us your personal development is paramount. We are helping you to identify your strengths and find your own project at Wikimedia. We offer internships, working student contracts, dissertations for pupils and students. Each pupil and student gets a
+                    mentor who supports them with their personal development.
+                </p>
 
-                    <p>We can support you in several ways:</p>
+                <p>We can support you in several ways:</p>
 
-                    <ul>
-                        <li>Level I: mandatory and voluntary internships (3-6 months)</li>
-                        <li>Level II: dissertation (6 months)</li>
-                        <li>Level III: Working Student (1-2 years)</li>
-                    </ul>
+                <ul>
+                    <li>Level I: mandatory and voluntary internships (3-6 months)</li>
+                    <li>Level II: dissertation (6 months)</li>
+                    <li>Level III: Working Student (1-2 years)</li>
+                </ul>
 
-                    <p>
-                        Additionally we support you and your project by offering you the possibility
-                        to go to hackathons and events to present your project.
-                    </p>
+                <p>
+                    Additionally we support you and your project by offering you the possibility to go to hackathons and events to present your project.
+                </p>
 
-                    <p>
-                        To get an idea of what internships at Wikimedia Deutchland are like, you can
-                        <a href="https://blog.wikimedia.de/2015/08/17/internship-at-wikimedia-deutschland-e-v/">read about Andrew's Internship</a>,
-                        <a href="http://hackerpublicradio.org/eps.php?id=1959">listen to Marius on his Opinion to Mediawiki and Wikidata</a> or
-                        <a href="http://bofh.nikhef.nl/events/FOSDEM/2016/aw1120/free-knowledge-game-jam-bringing-two-worlds-together.mp4">
+                <p>
+                    To get an idea of what internships at Wikimedia Deutchland are like, you can
+                    <a href="https://blog.wikimedia.de/2015/08/17/internship-at-wikimedia-deutschland-e-v/">read about Andrew's Internship</a>,
+                    <a href="http://hackerpublicradio.org/eps.php?id=1959">listen to Marius on his Opinion to Mediawiki and Wikidata</a> or
+                    <a href="http://bofh.nikhef.nl/events/FOSDEM/2016/aw1120/free-knowledge-game-jam-bringing-two-worlds-together.mp4">
                             watch Jens Ohlig und Julia Schütze present the GameJam at Fosdem 2016</a>.
-                    </p>
+                </p>
 
-                    <p>
-                        We do not only support individual development but also the advancement of a study
-                        group. If you have a semester project at your university, we welcome to work
-                        with the group closely.
-                    </p>
+                <p>
+                    We do not only support individual development but also the advancement of a study group. If you have a semester project at your university, we welcome to work with the group closely.
+                </p>
 
-                    <p>
-                        For example, a student group of developers from the HPI Potsdam enhanced the
-                        quality of Wikidata in a project:
-                    </p>
+                <p>
+                    For example, a student group of developers from the HPI Potsdam enhanced the quality of Wikidata in a project:
+                </p>
 
-                    <ul>
-                        <li><a href="https://blog.wikimedia.de/2015/03/13/improving-data-quality-on-wikidata-checking-what-we-have/">
+                <ul>
+                    <li><a href="https://blog.wikimedia.de/2015/03/13/improving-data-quality-on-wikidata-checking-what-we-have/">
                             Data Quality Improvements by Hasso Plattner Institut Students
                         </a></li>
-                        <li><a href="https://hpi.de/fileadmin/user_upload/hpi/navigation/20_das_hpi/20_veranstaltungen/05_hpi_veranstaltungen/10_bachelorpodium/2014/pressemitteilung/20140707_BP_N2_final.pdf">
+                    <li><a href="https://hpi.de/fileadmin/user_upload/hpi/navigation/20_das_hpi/20_veranstaltungen/05_hpi_veranstaltungen/10_bachelorpodium/2014/pressemitteilung/20140707_BP_N2_final.pdf">
                             Press anouncement Hasso Plattner Institut (german only)
                         </a></li>
-                    </ul>
+                </ul>
 
-                    <div class="well">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <p>
-                                    To apply, please contact sandra.muellrick[at]wikimedia.de with a description
-                                    of what you want to do, your motivation and your CV.
-                                </p>
-                            </div>
-                            <div class="col-md-4">
-                                <a class="btn btn-lg btn-default btn-block" href="mailto:sandra.muellrick@wikimedia.de">Email Sandra</a>
-                            </div>
+                <div class="well">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p>
+                                To apply, please contact sandra.muellrick[at]wikimedia.de with a description of what you want to do, your motivation and your CV.
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="btn btn-lg btn-default btn-block" href="mailto:sandra.muellrick@wikimedia.de">Email Sandra</a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Jobs</h2>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Jobs</h2>
 
-                    <p>
-                        We provide several <a href="{{ basepath }}/jobs">career opportunities</a> that
-                        allow you to work in one of our development teams at our office in Berlin.
-                    </p>
-                </div>
+                <p>
+                    We provide several <a href="{{ basepath }}/jobs">career opportunities</a> that allow you to work in one of our development teams at our office in Berlin.
+                </p>
             </div>
         </div>
     </div>
+</div>
 
 </div>
 
