@@ -115,3 +115,8 @@ h1 .editlink, h2 .editlink {
     font-weight: normal;
     letter-spacing: 0em
 }
+
+h3,h4,h5,h6{
+    letter-spacing:0em;
+}
+
