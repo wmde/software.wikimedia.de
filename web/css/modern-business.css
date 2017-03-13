@@ -4,15 +4,16 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+
 /* Global Styles */
 
-html,
-body {
+html, body {
     height: 100%;
 }
 
 body {
-    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 50px;
+    /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
 .img-portfolio {
@@ -23,15 +24,14 @@ body {
     opacity: 0.8;
 }
 
+
 /* Home Page Carousel */
 
 header.carousel {
     height: 50%;
 }
 
-header.carousel .item,
-header.carousel .item.active,
-header.carousel .carousel-inner {
+header.carousel .item, header.carousel .item.active, header.carousel .carousel-inner {
     height: 100%;
 }
 
@@ -42,11 +42,13 @@ header.carousel .fill {
     background-size: cover;
 }
 
+
 /* 404 Page Styles */
 
 .error-404 {
     font-size: 100px;
 }
+
 
 /* Pricing Page Styles */
 
@@ -67,17 +69,18 @@ header.carousel .fill {
     font-style: italic;
 }
 
+
 /* Footer Styles */
 
 footer {
     margin: 50px 0;
 }
 
+
 /* Responsive Styles */
 
 @media(max-width:991px) {
-    .customer-img,
-    .img-related {
+    .customer-img, .img-related {
         margin-bottom: 30px;
     }
 }
@@ -86,14 +89,15 @@ footer {
     .img-portfolio {
         margin-bottom: 15px;
     }
-
     header.carousel .carousel {
         height: 70%;
     }
 }
 
+
 /*custom*/
-.image-bg-fixed-height{
+
+.image-bg-fixed-height {
     text-align: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -105,3 +109,9 @@ footer {
     padding: 80px 0;
 }
 
+h1 .editlink, h2 .editlink {
+    float: right;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0em
+}
