@@ -6,17 +6,7 @@
 
 <div class="container">
 
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">{{job_title}}</h1>
-
-            <ol class="breadcrumb">
-                <li><a href="{{ basepath }}/">Home</a></li>
-                <li><a href="{{ basepath }}/jobs">Career Opportunities</a></li>
-                <li class="active">{{job_title}}</li>
-            </ol>
-        </div>
-    </div>
+    {{ include('sections/job/title-and-crumbs.html', {header_title: job_title, parent_title: 'Career Opportunities', parent_path: 'jobs'}) }}
 
     <div class="row">
         <div class="col-lg-12">

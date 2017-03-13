@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            {{ header_title }}
+            <a href="https://github.com/wmde/software.wikimedia.de/edit/master/app/templates/pages/{{ page }}.html" class="editlink">Edit Page</a>
+        </h1>
+
+        <ol class="breadcrumb col-lg-12">
+            <li><a href="{{ basepath }}/">Home</a></li>
+            {% if parent_title %}<li><a href="{{ basepath }}/{{ parent_path }}">{{ parent_title }}</a></li>{% endif %}
+            <li class="active">{{ header_title }}</li>
+        </ol>
+    </div>
+</div>
