@@ -116,3 +116,8 @@ h1 .editlink {
     letter-spacing: 0em;
     margin-top: 20px;
 }
+
+h3,h4,h5,h6{
+    letter-spacing:0em;
+}
+
