@@ -441,7 +441,7 @@
                     {% for post in getBlogPosts("http://fordes.de/feeds/blog.atom.xml", 3) %}
                     <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
                     {% endfor %}
-                    {% for post in getBlogPosts("http://lebenplusplus.de/wikimedia.rss.xml", 3) %}
+                    {% for post in getBlogPosts("https://lebenplusplus.de/wikimedia.rss.xml", 3) %}
                     <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
                     {% endfor %}
                 </ul>
