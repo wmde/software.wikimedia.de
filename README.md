@@ -4,8 +4,6 @@
 
 This repo contains the resources of the [software.wikimedia.de website](https://software.wikimedia.de).
 
-The website uses the [Silex](http://silex.sensiolabs.org/) PHP micro-framework. It requires PHP 7.0 or later.
-
 ## Contributing
 
 ### Website scope and audience
@@ -27,6 +25,8 @@ whenever the next deployment happens, or you can pester either @addshore or @Jer
 
 ### Running the website
 
+Running the site requires PHP 7.0 or later.
+
 After cloning the repo, run `composer install` in the root directory.
 
 For running the application, execute `php -S 0:8000 -t web` in the root directory. This makes the site avilable at `http://localhost:8000/` in your browser.
@@ -34,6 +34,8 @@ For running the application, execute `php -S 0:8000 -t web` in the root director
 There are a few smoke tests that can be run with `vendor/bin/phpunit`
 
 ### I'm a UX and allergic to PHP
+
+The website uses the [Silex](http://silex.sensiolabs.org/) PHP micro-framework.
 
 The HTML can be found in `app/templates/`. The [Twig](http://twig.sensiolabs.org/) template engine is used.
 
