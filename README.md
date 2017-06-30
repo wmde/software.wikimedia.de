@@ -29,7 +29,7 @@ whenever the next deployment happens, or you can pester either @addshore or @Jer
 
 After cloning the repo, run `composer install` in the root directory.
 
-For running the application, execute `php -S 0:8000 -t web` in the root directory. No need to have a real server set up.
+For running the application, execute `php -S 0:8000 -t web` in the root directory. This makes the site avilable at `http://localhost:8000/` in your browser.
 
 There are a few smoke tests that can be run with `vendor/bin/phpunit`
 
