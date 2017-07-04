@@ -45,7 +45,7 @@ $app->error(function ( \Exception $e, Request $request, $code ) use ( $app ) {
 
 ( new Routes( $app ) )->register();
 
-if ( !in_array( @$_SERVER['REMOTE_ADDR'], [ '127.0.0.1', 'fe80::1', '::1' ] ) ) {
+if ( !$app['debug'] ) {
 	$app['http_cache']->run();
 }
 
