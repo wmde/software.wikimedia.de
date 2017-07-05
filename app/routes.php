@@ -18,29 +18,33 @@ class Routes {
 		$this->app->get(
 			'/',
 			function( Request $request ) {
-				return $this->renderPage( $request->getBasePath(), 'home' );
+				return $this->renderPage( $request, 'home' );
 			}
 		);
 
 		$this->app->get(
 			'/{page}',
 			function( Request $request, string $page ) {
-				return $this->renderPage( $request->getBasePath(), basename( $page ) );
+				return $this->renderPage( $request, basename( $page ) );
 			}
 		);
 
 		$this->app->get(
 			'/{page}/{sub}',
 			function( Request $request, string $page, string $sub ) {
-				return $this->renderPage( $request->getBasePath(), basename( $page ) . '/' . basename( $sub ) );
+				return $this->renderPage( $request, basename( $page ) . '/' . basename( $sub ) );
 			}
 		);
 	}
 
-	private function renderPage( string $basePath, string $pageName ): Response {
+	private function renderPage( Request $request, string $pageName ): Response {
 		try {
 			$response = new Response(
-				$this->renderTwigTemplate( $basePath, "pages/$pageName.html", $pageName )
+				$this->renderTwigTemplate(
+					$request,
+					"pages/$pageName.html",
+					$pageName
+				)
 			);
 
 			$response->setTtl( 1800 );
@@ -49,20 +53,33 @@ class Routes {
 		}
 		catch ( Twig_Error_Loader $ex ) {
 			return new Response(
-				$this->renderTwigTemplate( $basePath, 'errors/404.html', '' ),
+				$this->renderTwigTemplate(
+					$request,
+					'errors/404.html',
+					''
+				),
 				404
 			);
 		}
 	}
 
-	private function renderTwigTemplate( string $basePath, string $templateName, string $pageName ): string {
+	private function renderTwigTemplate( Request $request, string $templateName, string $pageName ): string {
 		return $this->getTwig()->render(
 			$templateName,
 			[
-				'basepath' => $basePath,
+				'basepath' => $this->getBasePath( $request ),
+				'filepath' => $request->getBasePath(),
 				'page' => $pageName
 			]
 		);
+	}
+
+	private function getBasePath( Request $request ): string {
+		if ( $request->getScriptName() === '/index.dev.php' ) {
+			return $request->getBasePath() . $request->getScriptName();
+		}
+
+		return $request->getBasePath();
 	}
 
 	private function getTwig(): \Twig_Environment {
