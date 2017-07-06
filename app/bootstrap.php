@@ -45,8 +45,4 @@ $app->error(function ( \Exception $e, Request $request, $code ) use ( $app ) {
 
 ( new Routes( $app ) )->register();
 
-if ( !$app['debug'] ) {
-	$app['http_cache']->run();
-}
-
 return $app;
