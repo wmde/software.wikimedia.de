@@ -9,13 +9,13 @@ This repo contains the resources of the [software.wikimedia.de website](https://
 ### Website scope and audience
 
 This website is meant to give people not familiar with our department an idea of who we are, what we do and how we do it.
-The target audience that motivated its creation and potential hires. While the site can be used to cater to other needs
+The target audience that motivated its creation is potential hires. While the site can be used to cater to other needs
 as well, the hiring one should always be kept in mind.
 
 ### Who can edit and who is responsible
 
 You can treat the website as if it where a wiki. In fact, the previous version of the site was on a wiki. Use your own
-best judgement. If you arr fixing a typo, just push to master. If you think it warrants a second eye or you are actively
+best judgement. If you are fixing a typo, just push to master. If you think it warrants a second eye or you are actively
 looking for feedback, create a pull request. Everyone part of the WMDE GitHub organization can merge pull requests.
 
 The main authors or the existing content are @samu-wmde and @JeroenDeDauw, so these are the primary suspects for feedback.
@@ -33,7 +33,7 @@ For running the application, execute `php -S 0:8000 -t web` in the root director
 available at `http://localhost:8000/` in your browser. For development, you probably want to use the
 development entry point `url:8000/index.dev.php`, which enables debug mode and disables HTTP caching.
 
-There are a few smoke tests that can be run with `composer ci`
+There are a few smoke tests that can be run with `composer ci`.
 
 ### I'm a UX and allergic to PHP
 
@@ -48,7 +48,7 @@ The HTML of the website can be found in `app/templates/`.
 * `pages/` contains one file per page, matching URL structure (plus `.html`)
 * `sections/` contains page sections used on multiple pages via the Twig `include` thing
 
-Resources such as JS, CSS and images can be found in `web/`
+Resources such as JS, CSS and images can be found in `web/`.
 
 The layout is based on Twitter Bootstrap and uses structure borrowed from the
 [Modern Business bootstrap template](https://startbootstrap.com/template-overviews/modern-business/).
