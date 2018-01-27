@@ -33,6 +33,11 @@ For running the application, execute `php -S 0:8000 -t web` in the root director
 available at `http://localhost:8000/` in your browser. For development, you probably want to use the
 development entry point `url:8000/index.dev.php`, which enables debug mode and disables HTTP caching.
 
+To run the application from Docker (does not require having PHP installed):
+
+    docker run --rm --interactive --tty --network="host" --volume $PWD:/app -w /app \
+    	--volume ~/.composer:/composer --user $(id -u):$(id -g) composer php -S 0:8000 -t web
+
 There are a few smoke tests that can be run with `composer ci`.
 
 ### I'm a UX and allergic to PHP
