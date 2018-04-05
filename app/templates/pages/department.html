@@ -557,7 +557,7 @@
                     {% for post in getBlogPosts("https://www.entropywins.wtf/blog/tag/wmde/feed/atom/", 3) %}
                     <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
                     {% endfor %}
-                    {% for post in getBlogPosts("https://addshore.com/tag/wmde/feed/", 3) %}
+                    {% for post in getBlogPosts("https://addshore.com/tag/wikimedia/feed/", 3) %}
                     <li><a href="{{ post.link|e }}">{{ post.title|raw }}</a></li>
                     {% endfor %}
                     {% for post in getBlogPosts("http://fordes.de/feeds/blog.atom.xml", 3) %}
