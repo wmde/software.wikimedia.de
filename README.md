@@ -1,3 +1,5 @@
+The website was discontinued in April 2019. The subdomain software.wikimedia.de now redirects to [www.wikimedia.de](https://github.com/wmde/wikimedia.de).
+
 # software.wikimedia.de website
 
 [![Build Status](https://travis-ci.org/wmde/software.wikimedia.de.svg)](https://travis-ci.org/wmde/software.wikimedia.de)
